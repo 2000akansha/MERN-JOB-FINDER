@@ -88,6 +88,7 @@ export const employerGetAllApplications = catchAsyncErrors(async (req, res, next
   //   return next(new ErrorHandler("Only employers are allowed to access this resource.", 403));
   // }
 
+
   try {
     // Fetch applications for the authenticated employer
     const applications = await Application.find({ "employerID.user": _id });
